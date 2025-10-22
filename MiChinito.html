@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Para mi Chinito ♥</title>
+</head>
+<body>
+<link rel="stylesheet" href="estilos.css">
+<div class="password-overlay" id="password-modal">
+  <div class="password-box">
+    <h2>Te amo mi amor</h2>
+    <p>Ingresa la contraseña(Es algo que se repite todos los meses):</p>
+    <input type="password" id="pw" placeholder="Contraseña" />
+    <br>
+    <button onclick="checkPassword()">Entrar</button>
+    <p id="pw-wrong" style="color:#ea4c89; display:none">Así sos Benja :c</p>
+  </div>
+</div>
+
+<div class="container" style="display:none" id="main-content">
+  <img src="https://prosettings.net/cdn-cgi/image/dpr=1%2Cf=auto%2Cfit=pad%2Ch=675%2Cq=85%2Csharpen=2%2Cw=1200/wp-content/uploads/keznit.png" alt="Krü Esports" class="kruesports">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Valorant_logo_-_pink_color_version_%28cropped%29.png" alt="Valorant" class="valorant-logo">
+  <h1>Mi Jugador Favorito 💗</h1>
+  <hr class="divider">
+
+  <div class="photo-frame">
+    <label for="foto1"><img src="https://media.discordapp.net/attachments/987887019491479602/1429601659452919890/rn_image_picker_lib_temp_a888e7e2-8628-47aa-bb42-0ab84afe838e.jpg?ex=68f6bbcc&is=68f56a4c&hm=59bb5066e99a3e850ae8fd2fbd353a585fd7f487fac99737008859869fd17a0f&=&format=webp&width=936&height=833" alt="Foto juntos" class="foto1"></label>
+  </div>
+
+  <section>
+    <p>
+      <b>Querido Benja:</b><br>
+      Realmente no sé hacer una página web (me ayudó mi amigo Chat GPT jijiji), pero aun así quise hacerte algo, porque desde mi corazón quería dejarte esto. Puede que no estemos físicamente juntos, pero yo te amo de aquí hasta Argentina, de aquí hasta la luna, de aquí hasta el infinito, porque eres una persona maravillosa que me demuestra su amor todos los días.Tú eres quien me inspira a seguir de pie cada día. Realmente admiro lo fuerte que eres después de todo lo que has vivido, y te juro que me siento orgullosa de ti. Me encantaría poder estar contigo en persona para cantarte feliz cumpleaños mirándote a los ojos, abrazarte fuerte y regalonearte todo el día como te mereces.Si en algún momento necesitas ayuda, quiero que sepas que siempre voy a estar para ti. Nunca te juzgaré, nunca te soltaré. Eres mi persona especial, te amo, y te amaré siempre en todas tus versiones. <br>
+      <br>
+      <i>
+        "Te quiero así como eres. Con todo lo bueno que no ves, y con todo lo malo que dices tener" ♡. -Mario Benedetti 
+      </i>
+    </p>
+  </section>
+  <hr class="divider">
+
+  <!-- Sección de Audio -->
+  <div class="audio-section">
+    <label>Feliz cumpleaños mi amor :3 </label>
+    <audio id="audioPlayer" controls></audio>
+  </div>
+
+  <hr class="divider">
+
+  <div class="photo-frame">
+    <label for="foto2"><img src="https://media.discordapp.net/attachments/987887019491479602/1429567974141857864/image-57.png?ex=68f69c6d&is=68f54aed&hm=750578f8b32f016a0d20e52ae00b2a8975d493067fccabdb937e5b50942f4a82&=&format=webp&quality=lossless&width=755&height=575" alt="Foto bonita" class="foto2"></label>
+  </div>
+
+  <div class="footer">
+    <span>Con amor, tu novia Consuelito ♡</span>
+  </div>
+</div>
+
+<script>
+  // Cambia este enlace por el de tu audio MP3 público
+  const audioSrc = "https://github.com/Chelosk/Miamor/raw/refs/heads/main/FELIZ%20CUMPLEA%C3%91OS.m4a";
+
+  function checkPassword() {
+    const pwInput = document.getElementById('pw').value;
+    if (pwInput === "23032025") {
+      document.getElementById('password-modal').style.display = "none";
+      document.getElementById('main-content').style.display = "";
+
+      // Set audio src and reproduce automáticamente
+      const audioPlayer = document.getElementById('audioPlayer');
+      audioPlayer.src = audioSrc;
+      audioPlayer.load();
+      // Autoplay: algunos navegadores solo permiten autoplay si el usuario interactuó
+      setTimeout(() => {
+        audioPlayer.play().catch(()=>{});
+      }, 500);
+    } else {
+      document.getElementById('pw-wrong').style.display = "block";
+    }
+  }
+</script>
+
+</body>
+</html>
